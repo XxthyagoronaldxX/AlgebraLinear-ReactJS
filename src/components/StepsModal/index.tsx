@@ -23,7 +23,8 @@ export function StepsModal(props: StepsModalProps) {
       className='react-modal-content'
     >
       <Container>
-        <Step>
+        <Step isResult={true}>
+          <h1>Resultado</h1>
           <ShowMatriz matriz={steps.length !== 0 ? steps[steps.length-1].matrizAfter : {} as MatrizModel}/>
         </Step>
 

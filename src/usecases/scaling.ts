@@ -23,7 +23,7 @@ function makeSteps(matrizModel: MatrizModel, done: string, make: any) {
 
   let matrizAfter = MatrizModel.clone(make());
 
-  step.matrizAfter = matrizAfter
+  step.matrizAfter = matrizAfter;
 
   steps.push(step);
 
@@ -121,8 +121,10 @@ function switchLinesAndSaveStep(
   from_line: number,
   to_line: number
 ) {
-  return makeSteps(matrizModel, `L${from_line + 1} <=> L${to_line + 1}`, () =>
-    switchLines(matrizModel, from_line, to_line)
+  let matrizModelAux = MatrizModel.clone(matrizModel)
+
+  return makeSteps(matrizModelAux, `L${from_line + 1} <=> L${to_line + 1}`, () =>
+    switchLines(matrizModelAux, from_line, to_line)
   );
 }
 
@@ -164,10 +166,12 @@ function transformCoefficientToOne(matrizModel: MatrizModel, location: number) {
 }
 
 export function scaling(matrizModel: MatrizModel, kCombination: number) {
-  steps = []
+  steps = [];
 
   for (let j = 0; matrizModel.matriz[0].length - kCombination > j; j++) {
-    matrizModel = MatrizModel.clone(transformCoefficientToOne(matrizModel, j));
+    matrizModel = MatrizModel.clone(
+      transformCoefficientToOne(matrizModel, j)
+    );
 
     matrizModel = MatrizModel.clone(
       transformOthersCoefficientsToZero(matrizModel, j)
