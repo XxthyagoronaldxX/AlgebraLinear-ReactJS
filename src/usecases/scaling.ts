@@ -167,18 +167,60 @@ function transformCoefficientToOne(matrizModel: MatrizModel, location: number) {
   return matrizModelAux
 }
 
-export function scaling(matrizModel: MatrizModel, kCombination: number) {
-  steps = []
+function isAllColumnValuesZero(matrizModel: MatrizModel, column: number) {
+  let isAllColumnValuesZero = true
 
-  for (let j = 0; matrizModel.matriz[0].length - kCombination > j; j++) {
-    matrizModel = MatrizModel.clone(transformCoefficientToOne(matrizModel, j))
-
-    matrizModel = MatrizModel.clone(
-      transformOthersCoefficientsToZero(matrizModel, j)
-    )
+  for (let i = 0; matrizModel.getRow() > i; i++) {
+    if (matrizModel.matriz[i][column] !== 0) isAllColumnValuesZero = false
   }
 
-  matrizModel = MatrizModel.clone(simplifyResults(matrizModel, kCombination))
+  return isAllColumnValuesZero
+}
+
+function isAlreadyScaloned(matrizModel: MatrizModel) {
+  let isAlreadyScaloned = true
+
+  for (let i = 0;i < matrizModel.getColumn()-matrizModel.combination;i++) {
+    if (matrizModel.matriz[i][i] === 1) {
+      for (let j = 0;j < matrizModel.getColumn()-matrizModel.combination;j++) {
+        if (matrizModel.matriz[i][j] !== 0 && i !== j) {
+          isAlreadyScaloned = false
+        }
+      }
+    }
+  }
+
+  return isAlreadyScaloned
+}
+
+export function scaling(matrizModel: MatrizModel) {
+  steps = []
+
+  if (matrizModel.isNull()) {
+    steps.push({
+      matrizBefore: matrizModel,
+      done: "Matriz Nula",
+      matrizAfter: matrizModel,
+    })
+  } else if (isAlreadyScaloned(matrizModel)) {
+    steps.push({
+      matrizBefore: matrizModel,
+      done: "Já está escalonada",
+      matrizAfter: matrizModel,
+    })
+  } else {
+    for (let j = 0; matrizModel.getColumn() - matrizModel.combination > j; j++) {
+      if (!isAllColumnValuesZero(matrizModel, j)) {
+        matrizModel = MatrizModel.clone(transformCoefficientToOne(matrizModel, j))
+
+        matrizModel = MatrizModel.clone(
+          transformOthersCoefficientsToZero(matrizModel, j)
+        )
+      }
+    }
+  }
+
+  matrizModel = MatrizModel.clone(simplifyResults(matrizModel))
 
   return {
     steps,

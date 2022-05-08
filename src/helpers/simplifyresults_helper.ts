@@ -1,12 +1,12 @@
 import { MatrizModel } from "../models/matriz"
 import { simplifyFraction } from "../usecases/simplify_fraction"
 
-export function simplifyResults(matrizModel: MatrizModel, kCombination: number) {
+export function simplifyResults(matrizModel: MatrizModel) {
   let matrizModelAux = MatrizModel.clone(matrizModel)
   let matriz = matrizModelAux.matriz
 
   for (let i = 0; i < matrizModelAux.getRow(); i++) {
-    for (let c = matrizModelAux.getColumn() - kCombination; c < matrizModelAux.getColumn(); c++) {
+    for (let c = matrizModelAux.getColumn() - matrizModel.combination; c < matrizModelAux.getColumn(); c++) {
       if (typeof (matriz[i][c]) == "string") {
         let split = matriz[i][c].toString().split("/")
         let dividendo = parseInt(split[0])

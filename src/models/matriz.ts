@@ -22,9 +22,33 @@ export class MatrizModel {
       getColumn(): number {
         return this.matriz[0].length
       },
+
+      isNull(): boolean {
+        let isNull = true
+
+        for (let i = 0;i < this.getRow(); i++) {
+          for (let j = 0;j < this.getColumn();j++) {
+            if (this.matriz[i][j] !== 0) isNull = false
+          }
+        }
+
+        return isNull
+      }
     } as MatrizModel, matrizModel)
 
     return newMatrizModel
+  }
+
+  isNull(): boolean {
+    let isNull = true
+
+    for (let i = 0;i < this.getRow(); i++) {
+      for (let j = 0;j < this.getColumn();j++) {
+        if (this.matriz[i][j] !== 0) isNull = false
+      }
+    }
+
+    return isNull
   }
 
   getRow(): number {

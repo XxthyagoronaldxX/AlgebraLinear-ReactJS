@@ -25,7 +25,7 @@ export function ScalingProvider(props: ScalingProviderProps) {
   function handleScalingMatriz(matriz: MatrizModel) {
     let matrizAux = MatrizModel.clone(matriz)
 
-    const result = scaling(matrizAux, matrizAux.combination)
+    const result = scaling(matrizAux)
 
     setSteps(result.steps)
   }
