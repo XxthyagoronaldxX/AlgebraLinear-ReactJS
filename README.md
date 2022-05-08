@@ -19,6 +19,8 @@ de valores que serão escalonados para chegar em um valor responsável pela loca
 <h3> Entrada dos valores: </h3>
 <img src="https://user-images.githubusercontent.com/16446463/167279783-211657a3-5f82-4b1f-9353-e074bd0f8421.png" alt="InputMatrizScaling" />
 <h3> Resultado mais passo-a-passo: </h3>
+<img src="https://user-images.githubusercontent.com/16446463/167279934-9519afee-5c32-4781-80ae-50c07ff3fdc3.png" alt="ResultMatrizScaling" />
+
 
 
 
