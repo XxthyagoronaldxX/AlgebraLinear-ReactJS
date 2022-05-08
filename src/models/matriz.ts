@@ -1,16 +1,16 @@
-import jQuery from "jquery";
+import jQuery from "jquery"
 
 export class MatrizModel {
-  public matriz: (number | string)[][];
-  public combination: number;
+  public matriz: (number | string)[][]
+  public combination: number
 
   private constructor(matriz: (number | string)[][], combination: number) {
-    this.matriz = matriz;
-    this.combination = combination;
+    this.matriz = matriz
+    this.combination = combination
   }
 
   static create(matriz: (number | string)[][] = [[]], combination: number = 0): MatrizModel {
-    return new MatrizModel(matriz, combination);
+    return new MatrizModel(matriz, combination)
   }
 
   static clone(matrizModel: MatrizModel): MatrizModel {
@@ -28,10 +28,10 @@ export class MatrizModel {
   }
 
   getRow(): number {
-    return this.matriz.length;
+    return this.matriz.length
   }
 
   getColumn(): number {
-    return this.matriz[0].length;
+    return this.matriz[0].length
   }
 }

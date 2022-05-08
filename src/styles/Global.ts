@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
     :root {
@@ -76,8 +76,9 @@ export const GlobalStyle = createGlobalStyle`
     .react-modal-content {
       background: var(--background);
       width: 100%;
-      height: 100%;
+      height: 95%;
       border-radius: 1.5rem;
+      margin: 4rem;
       overflow: hidden;
     }
-`;
+`

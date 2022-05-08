@@ -15,7 +15,7 @@ interface MatrizProviderProps {
 const MatrizContext = createContext<MatrizContextData>({} as MatrizContextData)
 
 export function MatrizProvider(props: MatrizProviderProps) {
-  const [ matriz, setMatriz ] = useState<MatrizModel>(MatrizModel.create())
+  const [matriz, setMatriz] = useState<MatrizModel>(MatrizModel.create())
 
   useEffect(() => {
     generateMatriz(3, 3, 1)

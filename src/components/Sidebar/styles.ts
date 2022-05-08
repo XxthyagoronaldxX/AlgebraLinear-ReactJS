@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.nav`
   background: var(--background-sidebar);
@@ -69,7 +69,7 @@ export const Container = styled.nav`
       transition: 0.2s filter;
 
       &:hover {
-        filter: brightness(0.9)
+        filter: brightness(0.9);
       }
     }
   }
@@ -78,4 +78,4 @@ export const Container = styled.nav`
     font-size: 0.8rem;
     filter: brightness(0.8);
   }
-`;
+`

@@ -18,7 +18,7 @@ export function Sidebar() {
     <Container>
       <header>
         <h1>Matriz</h1>
-        <h1>Escaling</h1>
+        <h1>Scaling</h1>
       </header>
       <form onSubmit={handleGenerateMatrizSubmit}>
         <label htmlFor="row">
@@ -42,7 +42,7 @@ export function Sidebar() {
             max='8'
             min='3'
             onChange={event => {
-              if (Number(event.target.value)-2 < combination) {
+              if (Number(event.target.value) - 2 < combination) {
                 event.target.value = column.toString()
               }
               setColumn(Number(event.target.value))
@@ -59,7 +59,7 @@ export function Sidebar() {
             min='1'
             value={combination}
             onChange={event => {
-              if (Number(event.target.value)+2 > column) {
+              if (Number(event.target.value) + 2 > column) {
                 event.target.value = combination.toString()
               }
               setCombination(Number(event.target.value))

@@ -8,7 +8,7 @@ import { AppContainer } from "./styles/App"
 import { GlobalStyle } from "./styles/Global"
 
 export function App() {
-  const [ isScalingModalOpen, setIsScalingModalOpen ] = useState(false)
+  const [isScalingModalOpen, setIsScalingModalOpen] = useState(false)
 
   function handleOpenScalingModal() {
     setIsScalingModalOpen(true)
@@ -25,7 +25,7 @@ export function App() {
           <Sidebar />
           <Content handleOpenScalingModal={handleOpenScalingModal} />
           <GlobalStyle />
-          <StepsModal isModalOpen={isScalingModalOpen} handleCloseModal={handleCloseScalingModal}/>
+          <StepsModal isModalOpen={isScalingModalOpen} handleCloseModal={handleCloseScalingModal} />
         </ AppContainer>
       </MatrizProvider>
     </ScalingProvider>

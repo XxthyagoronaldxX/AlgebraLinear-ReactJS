@@ -20,7 +20,7 @@ interface ScalingProviderProps {
 const ScalingContext = createContext<ScalingContextData>({} as ScalingContextData)
 
 export function ScalingProvider(props: ScalingProviderProps) {
-  const [ steps, setSteps ] = useState<Step[]>([])
+  const [steps, setSteps] = useState<Step[]>([])
 
   function handleScalingMatriz(matriz: MatrizModel) {
     let matrizAux = MatrizModel.clone(matriz)
@@ -31,7 +31,7 @@ export function ScalingProvider(props: ScalingProviderProps) {
   }
 
   return (
-    <ScalingContext.Provider value={{steps, handleScalingMatriz }}>
+    <ScalingContext.Provider value={{ steps, handleScalingMatriz }}>
       {props.children}
     </ScalingContext.Provider>
   )

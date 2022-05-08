@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const Container = styled.ol`
   width: 100%;
@@ -16,7 +16,7 @@ export const Container = styled.ol`
     border-radius: 10rem;
     overflow: hidden;
   }
-`;
+`
 
 interface InputMatrizProps {
   isCombination?: boolean
@@ -26,12 +26,14 @@ export const InputMatriz = styled.input<InputMatrizProps>`
   width: 4.3rem;
   height: 2rem;
 
-  background-color: ${(props) => props.isCombination ? 'var(--text-highlight)' : 'var(--input)'};
-  color: ${ (props) => props.isCombination ? 'var(--text-dark)' : 'var(--background)'};
+  background-color: ${(props) =>
+    props.isCombination ? "var(--text-highlight)" : "var(--input)"};
+  color: ${(props) =>
+    props.isCombination ? "var(--text-dark)" : "var(--background)"};
 
   text-align: center;
   font-size: 0.65rem;
   font-weight: bold;
 
   border: 1px solid var(--background);
-`;
+`

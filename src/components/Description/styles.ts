@@ -10,6 +10,6 @@ export const Container = styled.div`
   padding: 1rem 2.5rem;
 
   b {
-    color: var(--text-highlight)
+    color: var(--text-highlight);
   }
 `
