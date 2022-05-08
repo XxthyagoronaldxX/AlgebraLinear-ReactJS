@@ -5,9 +5,9 @@ export function switchLines(matrizModel: MatrizModel, line1: number, line2: numb
     let matriz = matrizModelAux.matriz
 
     for (let j = 0;j < matrizModel.getColumn();j++) {
-        let aux = matriz[line1][j];
-        matriz[line1][j] = matriz[line2][j];
-        matriz[line2][j] = aux;
+        let aux = matriz[line1][j]
+        matriz[line1][j] = matriz[line2][j]
+        matriz[line2][j] = aux
     }
 
     return matrizModelAux

@@ -1,11 +1,11 @@
 import { isDecimal } from "./isdecimal_helper"
 
 function fractionMultiplyFraction(value1: string, value2: string) {
-  let value1Split = value1.split('/')
+  let value1Split = value1.split("/")
   let value1Dividendo = parseInt(value1Split[0])
   let value1Divisor = parseInt(value1Split[1])
 
-  let value2Split = value2.split('/')
+  let value2Split = value2.split("/")
   let value2Dividendo = parseInt(value2Split[0])
   let value2Divisor = parseInt(value2Split[1])
 
@@ -16,7 +16,7 @@ function fractionMultiplyFraction(value1: string, value2: string) {
 }
 
 function fractionMultiplyK(value1: string, value2: number) {
-  let value1Split = value1.split('/')
+  let value1Split = value1.split("/")
   let value1Dividendo = parseInt(value1Split[0])
   let value1Divisor = parseInt(value1Split[1])
 

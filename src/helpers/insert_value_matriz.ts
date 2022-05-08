@@ -1,4 +1,4 @@
-import { MatrizModel } from "../models/matriz";
+import { MatrizModel } from "../models/matriz"
 
 export function insertValueMatriz(
   matriz: MatrizModel,
@@ -8,9 +8,9 @@ export function insertValueMatriz(
 ): (string|number)[][] {
   return matriz.matriz.map((r, rowIndex) =>
     r.map((c, columnIndex) => {
-      if (rowIndex === row && columnIndex === column) return value;
+      if (rowIndex === row && columnIndex === column) return value
 
-      return c;
+      return c
     })
-  );
+  )
 }
