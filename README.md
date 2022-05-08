@@ -12,11 +12,11 @@ Dessa forma, foi possível implementar o meu conhecimento adquirido ao estudar R
 
 <h2> Como utilizar? </h2>
 <img src="https://user-images.githubusercontent.com/16446463/167279596-6432371a-118a-43bf-9743-baacae473b7a.gif" alt="GifMatrizScaling" />
-<p>Na Sidebar é possível gerar uma matriz com a linha e coluna desejada. A opção Combinação serve para selecionar a quantidade
+<p style="{font-size: 16px;}">Na Sidebar é possível gerar uma matriz com a linha e coluna desejada. A opção Combinação serve para selecionar a quantidade
 de valores que serão escalonados para chegar em um valor responsável pela localização do ponto de interseção</p>
-<div style="{ display:flex; }">
+
 <img src="https://user-images.githubusercontent.com/16446463/167279703-551c5072-4aa8-42ea-92c0-0b3e05cba229.png" alt="SidebarMatrizScaling" />
 <img src="https://user-images.githubusercontent.com/16446463/167279783-211657a3-5f82-4b1f-9353-e074bd0f8421.png" alt="InputMatrizScaling" />
-</div>
+
 
 
