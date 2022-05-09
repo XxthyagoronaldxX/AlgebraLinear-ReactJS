@@ -178,19 +178,19 @@ function isAllColumnValuesZero(matrizModel: MatrizModel, column: number) {
 }
 
 function isAlreadyScaloned(matrizModel: MatrizModel) {
-  let isAlreadyScaloned = true
-
   for (let i = 0;i < matrizModel.getColumn()-matrizModel.combination;i++) {
     if (matrizModel.matriz[i][i] === 1) {
       for (let j = 0;j < matrizModel.getColumn()-matrizModel.combination;j++) {
         if (matrizModel.matriz[i][j] !== 0 && i !== j) {
-          isAlreadyScaloned = false
+          return false
         }
       }
+    } else {
+      return false
     }
   }
 
-  return isAlreadyScaloned
+  return true
 }
 
 export function scaling(matrizModel: MatrizModel) {

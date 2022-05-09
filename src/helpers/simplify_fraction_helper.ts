@@ -1,4 +1,4 @@
-import { isDecimal } from "../helpers/isdecimal_helper"
+import { isDecimal } from "./isdecimal_helper"
 
 export function simplifyFraction(dividendo: number, divisor: number): string {
   if (dividendo === divisor) return "1"

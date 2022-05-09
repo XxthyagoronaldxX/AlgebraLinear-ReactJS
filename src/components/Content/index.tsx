@@ -29,7 +29,7 @@ export function Content(props: ContentProps) {
           <button
             className="reset-button"
             onClick={event => {
-              generateMatriz(matriz.getColumn(), matriz.getRow(), matriz.combination)
+              generateMatriz(matriz.getRow(), matriz.getColumn(), matriz.combination)
             }}
           >
             Resetar

@@ -1,5 +1,5 @@
 import { MatrizModel } from "../models/matriz"
-import { simplifyFraction } from "../usecases/simplify_fraction"
+import { simplifyFraction } from "./simplify_fraction_helper"
 
 export function simplifyResults(matrizModel: MatrizModel) {
   let matrizModelAux = MatrizModel.clone(matrizModel)
